@@ -16,6 +16,7 @@ operativos a partir de un dataset estructurado.
 - sql/ → Scripts SQL (creación de tablas, modelo normalizado y consultas)
 - scripts/ → Análisis exploratorio en Python
 - visualizaciones/ → Dashboard de visualización
+- tests/ → Tests unitarios de la API
 - README.md → Documentación del proyecto
 
 ---
@@ -25,6 +26,7 @@ operativos a partir de un dataset estructurado.
 - **Base de datos:** Oracle SQL
 - **Backend / API:** Python (FastAPI)
 - **Visualización:** Power BI
+- **Testing:** Pytest
 
 ---
 
@@ -50,10 +52,29 @@ Instalación de dependencias:
 ```bash
 pip install fastapi uvicorn pandas
 
+## Cómo ejecutar la API
+Desde la raíz del proyecto:
+```bash
+uvicorn backend.main:app --reload
+
 ## Cómo acceder a la documentación de la API
 Una vez levantada la API de manera local, se puede acceder a la documentación
 interactiva (Swagger UI) desde el navegador en la siguiente dirección:
 
 http://127.0.0.1:8000/docs
+
+## Tests unitarios
+
+Se implementaron tests unitarios usando **pytest** para validar los endpoints principales de la API REST:
+
+- GET /produccion
+- GET /produccion/{equipo_id}
+- GET /ranking/operadores
+- Manejo de error para equipo inexistente
+
+### Ejecutar tests
+```bash
+pytest
+
 
 
