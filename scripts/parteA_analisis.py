@@ -1,7 +1,5 @@
-# ==============================
+
 # Parte A: Análisis de Datos
-# Challenge Producción Minera
-# ==============================
 
 import pandas as pd
 
@@ -20,7 +18,6 @@ print(df.info())
 
 # ==============================
 # MÉTRICAS CLAVE
-# ==============================
 
 # Productividad por equipo (promedio de toneladas extraídas)
 productividad_equipo = df.groupby("equipo_id")["toneladas_extraidas"].mean()
@@ -66,7 +63,6 @@ print(mejor_operador, "-", mejor_valor)
 
 # ==============================
 # ESTADÍSTICAS DESCRIPTIVAS
-# ==============================
 
 # Estadísticas por zona
 estadisticas_zona = df.groupby("zona")["toneladas_extraidas"].describe()
@@ -83,7 +79,6 @@ print(estadisticas_turno)
 
 # ==============================
 # DETECCIÓN DE ANOMALÍAS
-# ==============================
 
 media = df["toneladas_extraidas"].mean()
 desviacion = df["toneladas_extraidas"].std()
@@ -98,5 +93,6 @@ anomalias = df[
 
 print("\nProducciones anómalas detectadas:")
 print(anomalias[["fecha", "equipo_id", "operador", "toneladas_extraidas"]])
+
 
 print("\nTotal de anomalías detectadas:", len(anomalias))
