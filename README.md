@@ -11,7 +11,7 @@ operativos a partir de un dataset estructurado.
 ---
 
 ## Estructura del proyecto
-- api/ → API REST desarrollada con FastAPI
+- backend/ → API REST desarrollada con FastAPI
 - data/ → Dataset original en formato CSV
 - sql/ → Scripts SQL (creación de tablas, modelo normalizado y consultas)
 - scripts/ → Análisis exploratorio en Python
@@ -29,13 +29,14 @@ operativos a partir de un dataset estructurado.
 ---
 
 ## Justificación del stack
-Se eligió **Python** por su amplio ecosistema para análisis de datos y desarrollo backend.
-**FastAPI** fue seleccionado por su alto rendimiento, validación automática de datos y
-documentación interactiva (Swagger).
-**Oracle SQL** se utilizó para el modelado relacional y consultas analíticas.
-**Power BI** permite una visualización clara y profesional de los indicadores de negocio.
+Se eligió **Python** por su amplio ecosistema para el análisis de datos y desarrollo de APIs.
+**FastAPI** fue seleccionado por su alto rendimiento, validación automática de datos mediante
+Pydantic y documentación interactiva integrada (Swagger).
+**Oracle SQL** se utilizó para el diseño del modelo relacional y consultas analíticas.
+**Power BI** permite una visualización clara, interactiva y profesional de los indicadores clave
+del negocio.
 
-Este stack permite una solución clara, escalable y alineada con buenas prácticas de la industria.
+Este stack ofrece una solución escalable, clara y alineada con buenas prácticas de la industria.
 
 ---
 
@@ -48,3 +49,11 @@ Este stack permite una solución clara, escalable y alineada con buenas práctic
 Instalación de dependencias:
 ```bash
 pip install fastapi uvicorn pandas
+
+## Cómo acceder a la documentación de la API
+Una vez levantada la API de manera local, se puede acceder a la documentación
+interactiva (Swagger UI) desde el navegador en la siguiente dirección:
+
+http://127.0.0.1:8000/docs
+
+
