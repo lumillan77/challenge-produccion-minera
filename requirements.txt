@@ -1,0 +1,6 @@
+
+#requirements
+
+fastapi
+uvicorn
+pandas
