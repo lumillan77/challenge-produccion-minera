@@ -51,6 +51,7 @@ Este stack ofrece una solución escalable, clara y alineada con buenas práctica
 Instalación de dependencias:
 ```bash
 pip install fastapi uvicorn pandas
+pip install - requirements.txt
 
 ## Cómo ejecutar la API
 Desde la raíz del proyecto:
@@ -75,6 +76,7 @@ Se implementaron tests unitarios usando **pytest** para validar los endpoints pr
 ### Ejecutar tests
 ```bash
 pytest
+
 
 
 
