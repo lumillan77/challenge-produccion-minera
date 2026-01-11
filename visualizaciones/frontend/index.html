@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard de Producción Minera</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================= -->
+  <!-- TÍTULO PRINCIPAL -->
+  <!-- ========================= -->
+  <h1>Dashboard de Producción Minera</h1>
+
+  <!-- ========================= -->
+  <!-- DASHBOARD / MÉTRICAS -->
+  <!-- ========================= -->
+  <section id="dashboard">
+
+    <div class="card">
+      <h3>Total de Toneladas Extraídas</h3>
+      <p id="totalToneladas">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Total de Registros</h3>
+      <p id="totalRegistros">0</p>
+    </div>
+
+  </section>
+
+
+
+  <!-- ========================= -->
+<!-- RANKING DE OPERADORES -->
+<!-- ========================= -->
+<section id="ranking">
+  <h2>Top 5 Operadores (Producción Promedio)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Operador</th>
+        <th>Producción Promedio</th>
+      </tr>
+    </thead>
+    <tbody id="tablaRanking"></tbody>
+  </table>
+</section>
+
+<!-- ========================= -->
+<!-- GRÁFICO -->
+<!-- ========================= -->
+<section id="grafico">
+  <h2>Producción Promedio por Operador</h2>
+  <canvas id="graficoOperadores"></canvas>
+</section>
+
+<!-- Chart.js (CDN, NO instalación) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <!-- ========================= -->
+  <!-- FILTROS -->
+  <!-- ========================= -->
+  <section id="filtros">
+
+    <label>
+      Zona:
+      <select id="filtroZona">
+        <option value="">Todas las zonas</option>
+      </select>
+    </label>
+
+    <label>
+      Equipo:
+      <select id="filtroEquipo">
+        <option value="">Todos los equipos</option>
+      </select>
+    </label>
+
+    <label>
+      Operador:
+      <select id="filtroOperador">
+        <option value="">Todos los operadores</option>
+      </select>
+    </label>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- TABLA DE REGISTROS -->
+  <!-- ========================= -->
+  <table>
+
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Turno</th>
+        <th>Equipo</th>
+        <th>Operador</th>
+        <th>Zona</th>
+        <th>Toneladas Extraídas</th>
+      </tr>
+    </thead>
+
+    <tbody id="tablaDatos">
+      <!-- Aquí JavaScript insertará las filas -->
+    </tbody>
+
+  </table>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
